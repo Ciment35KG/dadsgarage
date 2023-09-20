@@ -1,0 +1,181 @@
+  
+          body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+  /* Styl pre informácie o mieste servisu, otváracích hodinách, telefóne a e-maile (v jednom riadku) */
+        .info {
+            font-weight: bold;
+            white-space: nowrap; /* Zabezpečí, že text nebude prelínat na viac riadkov */
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+      .left-info {
+        text-align: left;
+        margin-right: auto;
+    }
+      /* Styl pre miesto servisu a otváracie hodiny (vlavo) */
+      .right-info {
+          text-align: right;
+          margin-right: auto;
+      }
+      
+      .top-bar {
+        font-size: 1.1em;
+        color: #333;
+        padding: 5px 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .logo {
+      width: 65%; /* Logo zaberá 100% šírky stránky */
+      max-height: 800px; 
+      display: block; /* Odstráňte medzeru pod logom */
+      margin-left: 19%;
+  }
+
+        /* Štýl pre menu vpravo hore */
+        .menu {
+          text-align: right;
+          padding: 10px;
+          position: absolute;
+          top: 7%;
+          right: 1%;
+      }
+
+      /* Štýl pre položky menu */
+      .menu a {
+          color: #fff;
+          text-decoration: none;
+          margin-left: 15px;
+      }
+
+      .uzke {
+        font-weight: normal;
+        color: #fff;
+    }
+
+    .cervene {
+      color: rgb(255, 32, 32);
+  }
+
+  .service-bar {
+    color: rgb(255, 32, 32); /* Farba textu v lište */
+    text-align: center;
+    padding: 10px 0;
+}
+
+        /* Štýl pre kontajner s okienkami a textom */
+        .window-container {
+          display: flex;
+          flex-direction: column; /* Okénka budou pod sebou */
+          align-items: left;
+          margin-left: 10%;
+      }
+
+      /* Štýl pre okienka */
+      .window {
+        width: 270px;
+        height: 50px;
+        background-color: #e3e3e3; /* Bílé pozadí okénka */
+        margin: 10px 0;
+        cursor: pointer;
+        transition: transform 0.2s; /* Plynulá animace zvětšení */
+        text-align: center;
+        display: flex; /* Použití flexboxu pro zarovnání obsahu na střed */
+        flex-direction: column; /* Text a název budou pod sebou */
+        justify-content: center; /* Zarovnání na střed vertikálně */
+        position: relative;
+    }
+
+      /* Štýl pre zväčšené okienka */
+      .window:hover {
+          transform: scale(1.1); /* Zväčšenie pri najazde myšou */
+      }
+
+      /* Štýl pre text vedľa okienka (pred kliknutím) */
+      .window-text {
+            position: absolute;
+            top: 0;
+            left: 100%; /* Zobrazí se vedle okénka */
+            margin-left: 10px; /* Odstup mezi okénkem a textem */
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            display: none; /* Text je na začátku skrytý */
+            width: 200%;
+        }
+
+      /* Štýl pre text vedľa okienka (po kliknutí) */
+      .window.active .window-text {
+          display: block;
+      }
+      .window-title {
+        font-weight: bold;
+        text-align: center;
+        color: rgb(19, 19, 30)
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+      text-align: center;
+  }
+
+  label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+      width: 95%;
+      padding: 10px;
+      margin-top: 5px;
+  }
+
+  textarea {
+      resize: vertical;
+  }
+
+  input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+      background-color: #0056b3;
+  }
+
+  .opening-hours {
+    flex: 1; /* Rozšiřte "Opening Hours" na plnou šířku kontejneru */
+    text-align: right; /* Zarovnání textu "Opening Hours" na pravou stranu */
+}
+
+
+  .gdpr-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.gdpr-checkbox input[type="checkbox"] {
+    margin-right: 5px;
+}
